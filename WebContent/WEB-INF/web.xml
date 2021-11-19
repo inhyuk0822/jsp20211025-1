@@ -12,6 +12,17 @@
 		<welcome-file>default.htm</welcome-file>
 		<welcome-file>default.jsp</welcome-file>
 	</welcome-file-list>
+	
+	<!-- ServletContextListener 설정 -->
+	<listener>
+		<listener-class>listener01.AppListener04</listener-class>
+	</listener>
+	<listener>
+		<listener-class>listener01.AppListener03</listener-class>
+	</listener>
+	<listener>
+		<listener-class>listener01.AppListener05</listener-class>
+	</listener>
 
 	<!-- 세션 설정 -->
 	<session-config>
@@ -111,6 +122,16 @@
 	<filter-mapping>
 		<filter-name>f10filter</filter-name>
 		<url-pattern>/filterex4/member</url-pattern>
+	</filter-mapping>
+	
+	<!-- Book App Character Encoding Filter -->
+	<filter>
+		<filter-name>BookCharEncodingFilter</filter-name>
+		<filter-class>servlet08.S01BookCharEncodingFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>BookCharEncodingFilter</filter-name>
+		<url-pattern>/servlet08/*</url-pattern>
 	</filter-mapping>
 </web-app>
 
