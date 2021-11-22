@@ -14,38 +14,39 @@
 <title>Insert title here</title>
 </head>
 <body>
-
-  <!-- .container>.row>.col>h1{고객들} -->
+  <!-- .container>.row>.col>h1{공급자들} -->
   <div class="container">
     <div class="row">
       <div class="col">
-        <h1>고객들</h1>
-
-        <!-- table.table>thead>tr>th*4^^>tbody -->
+        <h1>공급자들</h1>
+        <!-- table.table>thead>tr>th*8^^tbody -->
         <table class="table">
           <thead>
             <tr>
               <th>ID</th>
-              <th>고객명</th>
-              <th>계약명</th>
-              <th>주소</th>
-              <th>도시</th>
-              <th>우편번호</th>
-              <th>국가</th>
+              <th>SNAME</th>
+              <th>CNAME</th>
+              <th>ADDRESS</th>
+              <th>CITY</th>
+              <th>POST</th>
+              <th>COUNTRY</th>
+              <th>PHONE</th>
             </tr>
           </thead>
           <tbody>
-            <c:forEach items="${customers }" var="customer">
+            <c:forEach items="${suppliers }" var="supplier">
               <tr>
-                <td>${customer.customerID }</td>
-                <td>${customer.customerName }</td>
-                <td>${customer.contactName }</td>
-                <td>${customer.address }</td>
-                <td>${customer.city }</td>
-                <td>${customer.postalCode }</td>
-                <td>${customer.country }</td>
+                <td>${supplier.supplierID }</td>
+                <td>${supplier.supplierName }</td>
+                <td>${supplier.contactName }</td>
+                <td>${supplier.address }</td>
+                <td>${supplier.city }</td>
+                <td>${supplier.postalCode }</td>
+                <td>${supplier.country }</td>
+                <td>${supplier.phone }</td>
               </tr>
             </c:forEach>
+
           </tbody>
         </table>
       </div>
@@ -56,15 +57,6 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
 
 
 
